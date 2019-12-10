@@ -56,7 +56,6 @@ table {
 
 html, body *{
     height: 100%;
-    border: 1px solid black;
     font-size: 62.5%;
 }
 
@@ -81,7 +80,7 @@ h4 {
 
 /* VARIABLES & MIXINS */
 
-@sectionHeadings: #708090;
+@sectionHeadings: #2F4F4F;
 
 @sectionSubHeadings: #483D8B;
 
@@ -93,7 +92,12 @@ h4 {
 
 @h3subsize: 1.8rem;
 
-@psize: 1rem;
+@psize: 1.6rem;
+
+.water-image {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
 
 .two-columns {
   width: 48%;
@@ -108,81 +112,222 @@ h4 {
 
 /* HEADER STYLING */
 
-nav {
-  .flex();
-  width: 100%;
-  justify-content: flex-end;
+header {
+  .water-image();
 
-  a {
-    font-size: 1.4rem;
-    margin: 0 2%;
-    color: @paragraphs;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #4B0082;
+  nav {
+    .flex();
+    width: 100%;
+    justify-content: flex-end;
+  
+    a {
+      font-size: 1.4rem;
+      margin: 0 2%;
+      color: @paragraphs;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      color: @title;
+    }
   }
 }
 
 /* SECTION STYLING */
 
 .title {
+  .water-image();
   .flex();
 
   .twoBlocks {
     .two-columns();
-  }
-}
 
-.skills {
-  .flex();
-  flex-direction: column;
+    h1 {
+      color: @sectionHeadings;
+      text-align: center;
+    }
 
-  .skillscontainer {
-    .flex();
-    width: 100%;
-    flex-wrap: wrap;
+    hr {
+      color: @paragraphs;
+    }
 
-    .threeBlocks {
-      width: 31%;
-      padding: 1%;
+    h2 {
+      color: @sectionSubHeadings;
+      text-align: center;
+    }
+
+    button {
+      margin: 2% 30% 0% 30%;
+      width: 40%;
+      height: 4vh;
+      font-size: @h3subsize;
+      color: @title;
+      border: none;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 2rem;
+      color: @paragraphs;
+      text-align: center;
     }
   }
 }
 
-.workhistory {
+.middle-content {
   .flex();
-  justify-content: center;
-
-  .workcontainer {
+  .water-image();
+  
+  .skills {
+    width: 48%;
     .flex();
     flex-direction: column;
-    width: 100%;
 
-    .twoBlocks {
-      .two-columns();
+    h2 {
+      color: @sectionHeadings;
+      margin-bottom: 5%;
+    }
+  
+    .skillscontainer {
+      .flex();
       width: 100%;
+      flex-wrap: wrap;
+  
+      .threeBlocks {
+        width: 31%;
+        padding: 1%;
+        margin: 1% 0 5% 0;
+        border: 1px solid black;
+
+        i {
+          text-align: center;
+          margin: 2% 48%;
+        }
+
+        p {
+          font-size: @h3subsize;
+          color: @sectionSubHeadings;
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  .workhistory {
+    width: 48%;
+    .flex();
+    justify-content: center;
+  
+    .workcontainer {
+      .flex();
+      flex-direction: column;
+      width: 100%;
+  
+      h2 {
+        color: @sectionHeadings;
+      }
+      .twoBlocks {
+        .flex();
+        justify-content: space-evenly;
+        flex-direction: column;
+        .two-columns();
+        width: 100%;
+        margin: 1% 2% 2% 2%;
+
+        div {
+          width: 80%;
+          .flex();
+          flex-direction: row;
+
+          .column {
+            .flex();
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+
+          img {
+            width: 10%;
+            height: 10%;
+            margin: 1%;
+          }
+        }
+
+        h3 {
+          color: @sectionSubHeadings;
+          font-size: @h3mainsize;
+        }
+
+        .subHeading {
+          color: @title;
+          font-size: @h3subsize;
+        }
+
+        p {
+          color: @paragraphs;
+          font-size: @psize;
+          margin-top: 2%;
+        }
+      }
+
+      hr {
+        color: @paragraphs;
+      }
     }
   }
 }
 
 /* FOOTER STYLING */
 
-.footercontainer {
-  .flex();
-  justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
+footer {
+  .water-image();
 
-  .contact {
+  .footercontainer {
     .flex();
-    flex-direction: row;
-    width: 30%;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
 
-    .twoBlocks {
-      .two-columns();
+    .icons {
+      .flex();
+      justify-content: center;
+      margin: 2% auto;
+      width: 30%;
+
+      a {
+        color: black;
+        margin: 1%;
+        width: 5%;
+
+        i {
+          line-height: 2;
+        }
+      }
+    }
+  
+    .contact {
+      .flex();
+      flex-direction: row;
+      width: 30%;
+  
+      .twoBlocks {
+        .two-columns();
+
+        h4 {
+          font-size: @psize;
+          color: @title;
+          text-align: center;
+        }
+
+        p {
+          font-size: 1.2rem;
+          color: @paragraphs;
+          text-align: center;
+        }
+      }
     }
   }
 }

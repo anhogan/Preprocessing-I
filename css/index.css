@@ -134,7 +134,6 @@ table {
 html,
 body * {
   height: 100%;
-  border: 1px solid black;
   font-size: 62.5%;
 }
 /* GENERAL STYLING */
@@ -154,6 +153,10 @@ h4 {
   font-size: 1.4rem;
 }
 /* VARIABLES & MIXINS */
+.water-image {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
 .two-columns {
   width: 48%;
   padding: 1%;
@@ -164,24 +167,30 @@ h4 {
   align-items: center;
 }
 /* HEADER STYLING */
-nav {
+header {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   justify-content: flex-end;
 }
-nav a {
+header nav a {
   font-size: 1.4rem;
   margin: 0 2%;
   color: black;
   text-decoration: none;
 }
-nav a:hover {
-  color: #4B0082;
+header nav a:hover {
+  color: #6A5ACD;
 }
 /* SECTION STYLING */
 .title {
+  background: url("../water.jpg");
+  background-repeat: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,43 +199,142 @@ nav a:hover {
   width: 48%;
   padding: 1%;
 }
-.skills {
+.title .twoBlocks h1 {
+  color: #2F4F4F;
+  text-align: center;
+}
+.title .twoBlocks hr {
+  color: black;
+}
+.title .twoBlocks h2 {
+  color: #483D8B;
+  text-align: center;
+}
+.title .twoBlocks button {
+  margin: 2% 30% 0% 30%;
+  width: 40%;
+  height: 4vh;
+  font-size: 1.8rem;
+  color: #6A5ACD;
+  border: none;
+}
+.title .twoBlocks button:hover {
+  cursor: pointer;
+}
+.title .twoBlocks p {
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+.middle-content .skills {
+  width: 48%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
-.skills .skillscontainer {
+.middle-content .skills h2 {
+  color: #2F4F4F;
+  margin-bottom: 5%;
+}
+.middle-content .skills .skillscontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
 }
-.skills .skillscontainer .threeBlocks {
+.middle-content .skills .skillscontainer .threeBlocks {
   width: 31%;
   padding: 1%;
+  margin: 1% 0 5% 0;
+  border: 1px solid black;
 }
-.workhistory {
+.middle-content .skills .skillscontainer .threeBlocks i {
+  text-align: center;
+  margin: 2% 48%;
+}
+.middle-content .skills .skillscontainer .threeBlocks p {
+  font-size: 1.8rem;
+  color: #483D8B;
+  text-align: center;
+}
+.middle-content .workhistory {
+  width: 48%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
 }
-.workhistory .workcontainer {
+.middle-content .workhistory .workcontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.workhistory .workcontainer .twoBlocks {
+.middle-content .workhistory .workcontainer h2 {
+  color: #2F4F4F;
+}
+.middle-content .workhistory .workcontainer .twoBlocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   width: 48%;
   padding: 1%;
   width: 100%;
+  margin: 1% 2% 2% 2%;
+}
+.middle-content .workhistory .workcontainer .twoBlocks div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.middle-content .workhistory .workcontainer .twoBlocks div .column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.middle-content .workhistory .workcontainer .twoBlocks div img {
+  width: 10%;
+  height: 10%;
+  margin: 1%;
+}
+.middle-content .workhistory .workcontainer .twoBlocks h3 {
+  color: #483D8B;
+  font-size: 2rem;
+}
+.middle-content .workhistory .workcontainer .twoBlocks .subHeading {
+  color: #6A5ACD;
+  font-size: 1.8rem;
+}
+.middle-content .workhistory .workcontainer .twoBlocks p {
+  color: black;
+  font-size: 1.6rem;
+  margin-top: 2%;
+}
+.middle-content .workhistory .workcontainer hr {
+  color: black;
 }
 /* FOOTER STYLING */
-.footercontainer {
+footer {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+footer .footercontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,14 +343,40 @@ nav a:hover {
   width: 80%;
   margin: 0 auto;
 }
-.footercontainer .contact {
+footer .footercontainer .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto;
+  width: 30%;
+}
+footer .footercontainer .icons a {
+  color: black;
+  margin: 1%;
+  width: 5%;
+}
+footer .footercontainer .icons a i {
+  line-height: 2;
+}
+footer .footercontainer .contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   width: 30%;
 }
-.footercontainer .contact .twoBlocks {
+footer .footercontainer .contact .twoBlocks {
   width: 48%;
   padding: 1%;
+}
+footer .footercontainer .contact .twoBlocks h4 {
+  font-size: 1.6rem;
+  color: #6A5ACD;
+  text-align: center;
+}
+footer .footercontainer .contact .twoBlocks p {
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
 }
