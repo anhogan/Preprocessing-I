@@ -129,8 +129,120 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 html,
-body {
+body * {
   height: 100%;
+  border: 1px solid black;
+  font-size: 62.5%;
+}
+/* GENERAL STYLING */
+header,
+section,
+footer {
+  margin: 1% 2%;
+  padding: 1%;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+/* VARIABLES & MIXINS */
+.two-columns {
+  width: 48%;
+  padding: 1%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* HEADER STYLING */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+nav a {
+  font-size: 1.4rem;
+  margin: 0 2%;
+  color: black;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #4B0082;
+}
+/* SECTION STYLING */
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title .twoBlocks {
+  width: 48%;
+  padding: 1%;
+}
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.skills .skillscontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.skills .skillscontainer .threeBlocks {
+  width: 31%;
+  padding: 1%;
+}
+.workhistory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.workhistory .workcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.workhistory .workcontainer .twoBlocks {
+  width: 48%;
+  padding: 1%;
+  width: 100%;
+}
+/* FOOTER STYLING */
+.footercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.footercontainer .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 30%;
+}
+.footercontainer .contact .twoBlocks {
+  width: 48%;
+  padding: 1%;
 }

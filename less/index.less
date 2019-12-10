@@ -51,9 +51,138 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
-html, body {
+html, body *{
     height: 100%;
+    border: 1px solid black;
+    font-size: 62.5%;
 }
 
+/* GENERAL STYLING */
+
+header, section, footer {
+  margin: 1% 2%;
+  padding: 1%;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+/* VARIABLES & MIXINS */
+
+@sectionHeadings: #708090;
+
+@sectionSubHeadings: #483D8B;
+
+@title: #6A5ACD;
+
+@paragraphs: black;
+
+@h3mainsize: 2rem;
+
+@h3subsize: 1.8rem;
+
+@psize: 1rem;
+
+.two-columns {
+  width: 48%;
+  padding: 1%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* HEADER STYLING */
+
+nav {
+  .flex();
+  width: 100%;
+  justify-content: flex-end;
+
+  a {
+    font-size: 1.4rem;
+    margin: 0 2%;
+    color: @paragraphs;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #4B0082;
+  }
+}
+
+/* SECTION STYLING */
+
+.title {
+  .flex();
+
+  .twoBlocks {
+    .two-columns();
+  }
+}
+
+.skills {
+  .flex();
+  flex-direction: column;
+
+  .skillscontainer {
+    .flex();
+    width: 100%;
+    flex-wrap: wrap;
+
+    .threeBlocks {
+      width: 31%;
+      padding: 1%;
+    }
+  }
+}
+
+.workhistory {
+  .flex();
+  justify-content: center;
+
+  .workcontainer {
+    .flex();
+    flex-direction: column;
+    width: 100%;
+
+    .twoBlocks {
+      .two-columns();
+      width: 100%;
+    }
+  }
+}
+
+/* FOOTER STYLING */
+
+.footercontainer {
+  .flex();
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+
+  .contact {
+    .flex();
+    flex-direction: row;
+    width: 30%;
+
+    .twoBlocks {
+      .two-columns();
+    }
+  }
+}
