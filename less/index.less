@@ -312,12 +312,23 @@ header {
     .workhistory {
       width: 100%;
 
-      .workcontainer, .twoBlocks{
-        margin: 1%;
+      .workcontainer {
+        .twoBlocks{
+          margin: 1%;
+  
+          div {
+            justify-content: center;
+            width: 100%;
+          }
 
-        div {
-          flex-direction: column;
-          width: 100%;
+          div.column {
+            width: 50%;
+            align-items: flex-end;
+          }
+  
+          p {
+            text-align: center;
+          }
         }
       }
     }

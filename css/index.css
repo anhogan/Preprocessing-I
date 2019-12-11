@@ -361,14 +361,19 @@ header nav a:hover {
   .middle-content .workhistory {
     width: 100%;
   }
-  .middle-content .workhistory .workcontainer,
-  .middle-content .workhistory .twoBlocks {
+  .middle-content .workhistory .workcontainer .twoBlocks {
     margin: 1%;
   }
-  .middle-content .workhistory .workcontainer div,
-  .middle-content .workhistory .twoBlocks div {
-    flex-direction: column;
+  .middle-content .workhistory .workcontainer .twoBlocks div {
+    justify-content: center;
     width: 100%;
+  }
+  .middle-content .workhistory .workcontainer .twoBlocks div.column {
+    width: 50%;
+    align-items: flex-end;
+  }
+  .middle-content .workhistory .workcontainer .twoBlocks p {
+    text-align: center;
   }
 }
 /* FOOTER STYLING */
