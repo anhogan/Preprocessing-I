@@ -188,11 +188,11 @@ header {
 
     h2 {
       color: @sectionHeadings;
-      margin-bottom: 5%;
     }
   
     .skillscontainer {
       .flex();
+      justify-content: center;
       width: 100%;
       flex-wrap: wrap;
   
@@ -204,7 +204,9 @@ header {
 
         i {
           text-align: center;
-          margin: 2% 48%;
+          font-size: 4rem;
+          width: 100%;
+          margin: 2% auto;
         }
 
         p {
@@ -229,13 +231,14 @@ header {
       h2 {
         color: @sectionHeadings;
       }
+
       .twoBlocks {
         .flex();
         justify-content: space-evenly;
         flex-direction: column;
         .two-columns();
         width: 100%;
-        margin: 1% 2% 2% 2%;
+        margin: 4% 2% 2% 2%;
 
         div {
           width: 80%;
@@ -294,16 +297,17 @@ footer {
     .icons {
       .flex();
       justify-content: center;
-      margin: 2% auto;
       width: 30%;
 
       a {
         color: black;
         margin: 1%;
-        width: 5%;
+        width: 10%;
 
         i {
           line-height: 2;
+          font-size: 2rem;
+          margin: 0 2%;
         }
       }
     }
@@ -311,6 +315,7 @@ footer {
     .contact {
       .flex();
       flex-direction: row;
+      justify-content: center;
       width: 30%;
   
       .twoBlocks {

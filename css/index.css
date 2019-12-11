@@ -242,12 +242,12 @@ header nav a:hover {
 }
 .middle-content .skills h2 {
   color: #2F4F4F;
-  margin-bottom: 5%;
 }
 .middle-content .skills .skillscontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -259,7 +259,9 @@ header nav a:hover {
 }
 .middle-content .skills .skillscontainer .threeBlocks i {
   text-align: center;
-  margin: 2% 48%;
+  font-size: 4rem;
+  width: 100%;
+  margin: 2% auto;
 }
 .middle-content .skills .skillscontainer .threeBlocks p {
   font-size: 1.8rem;
@@ -292,7 +294,7 @@ header nav a:hover {
   width: 48%;
   padding: 1%;
   width: 100%;
-  margin: 1% 2% 2% 2%;
+  margin: 4% 2% 2% 2%;
 }
 .middle-content .workhistory .workcontainer .twoBlocks div {
   width: 80%;
@@ -348,22 +350,24 @@ footer .footercontainer .icons {
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  margin: 2% auto;
   width: 30%;
 }
 footer .footercontainer .icons a {
   color: black;
   margin: 1%;
-  width: 5%;
+  width: 10%;
 }
 footer .footercontainer .icons a i {
   line-height: 2;
+  font-size: 2rem;
+  margin: 0 2%;
 }
 footer .footercontainer .contact {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  justify-content: center;
   width: 30%;
 }
 footer .footercontainer .contact .twoBlocks {
