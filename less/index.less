@@ -130,6 +130,15 @@ header {
     a:hover {
       color: @title;
     }
+
+    @media (max-width: 500px) {
+      justify-content: space-between;
+
+      a {
+        font-size: @psize;
+        margin: 1% 3%;
+      }
+    }
   }
 }
 
@@ -173,6 +182,14 @@ header {
       font-size: 2rem;
       color: @paragraphs;
       text-align: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+
+    .twoBlocks {
+      width: 100%;
     }
   }
 }
@@ -280,6 +297,31 @@ header {
       }
     }
   }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+
+    .skills {
+      width: 100%;
+
+      h2 {
+        margin-bottom: 2%;
+      }
+    }
+
+    .workhistory {
+      width: 100%;
+
+      .workcontainer, .twoBlocks{
+        margin: 1%;
+
+        div {
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 /* FOOTER STYLING */
@@ -310,6 +352,14 @@ footer {
           margin: 0 2%;
         }
       }
+
+      @media (max-width: 500px) {
+        width: 100%;
+
+        a {
+          width: auto;
+        }
+      }
     }
   
     .contact {
@@ -331,6 +381,14 @@ footer {
           font-size: 1.2rem;
           color: @paragraphs;
           text-align: center;
+        }
+      }
+
+      @media (max-width: 500px) {
+        width: 100%;
+
+        .twoBlocks {
+          width: 30%;
         }
       }
     }
