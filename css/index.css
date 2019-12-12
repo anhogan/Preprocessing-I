@@ -1,1 +1,447 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+html,
+body * {
+  height: 100%;
+  font-size: 62.5%;
+}
+/* GENERAL STYLING */
+header,
+section,
+footer {
+  margin: 1% 2%;
+  padding: 1%;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+/* VARIABLES & MIXINS */
+.water-image {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+.two-columns {
+  width: 48%;
+  padding: 1%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* HEADER STYLING */
+header {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+header nav a {
+  font-size: 1.4rem;
+  margin: 0 2%;
+  color: black;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: #6A5ACD;
+}
+@media (max-width: 500px) {
+  header nav {
+    justify-content: space-between;
+  }
+  header nav a {
+    font-size: 1.6rem;
+    margin: 1% 3%;
+  }
+}
+/* SECTION STYLING */
+.title {
+  background: url("../water.jpg");
+  background-repeat: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title .twoBlocks {
+  width: 48%;
+  padding: 1%;
+}
+.title .twoBlocks h1 {
+  color: #2F4F4F;
+  text-align: center;
+}
+.title .twoBlocks hr {
+  color: black;
+}
+.title .twoBlocks h2 {
+  color: #483D8B;
+  text-align: center;
+}
+.title .twoBlocks button {
+  margin: 2% 30% 0% 30%;
+  width: 40%;
+  height: 4vh;
+  font-size: 1.8rem;
+  color: #6A5ACD;
+  border: none;
+}
+.title .twoBlocks button:hover {
+  cursor: pointer;
+}
+.title .twoBlocks p {
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .title {
+    flex-direction: column;
+  }
+  .title .twoBlocks {
+    width: 100%;
+  }
+}
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+.middle-content .skills {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.middle-content .skills h2 {
+  color: #2F4F4F;
+}
+.middle-content .skills .skillscontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.middle-content .skills .skillscontainer .threeBlocks {
+  width: 31%;
+  padding: 1%;
+  margin: 1% 0 5% 0;
+  border: 1px solid black;
+}
+.middle-content .skills .skillscontainer .threeBlocks i {
+  text-align: center;
+  font-size: 4rem;
+  width: 100%;
+  margin: 2% auto;
+}
+.middle-content .skills .skillscontainer .threeBlocks p {
+  font-size: 1.8rem;
+  color: #483D8B;
+  text-align: center;
+}
+.middle-content .workhistory {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.middle-content .workhistory .workcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.middle-content .workhistory .workcontainer h2 {
+  color: #2F4F4F;
+}
+.middle-content .workhistory .workcontainer .twoBlocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 48%;
+  padding: 1%;
+  width: 100%;
+  margin: 4% 2% 2% 2%;
+}
+.middle-content .workhistory .workcontainer .twoBlocks div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.middle-content .workhistory .workcontainer .twoBlocks div .column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.middle-content .workhistory .workcontainer .twoBlocks div img {
+  width: 10%;
+  height: 10%;
+  margin: 1%;
+}
+.middle-content .workhistory .workcontainer .twoBlocks h3 {
+  color: #483D8B;
+  font-size: 2rem;
+}
+.middle-content .workhistory .workcontainer .twoBlocks .subHeading {
+  color: #6A5ACD;
+  font-size: 1.8rem;
+}
+.middle-content .workhistory .workcontainer .twoBlocks p {
+  color: black;
+  font-size: 1.6rem;
+  margin-top: 2%;
+}
+.middle-content .workhistory .workcontainer hr {
+  color: black;
+}
+@media (max-width: 500px) {
+  .middle-content {
+    flex-direction: column;
+  }
+  .middle-content .skills {
+    width: 100%;
+  }
+  .middle-content .skills h2 {
+    margin-bottom: 2%;
+  }
+  .middle-content .workhistory {
+    width: 100%;
+  }
+  .middle-content .workhistory .workcontainer .twoBlocks {
+    margin: 1%;
+  }
+  .middle-content .workhistory .workcontainer .twoBlocks div {
+    justify-content: center;
+    width: 100%;
+  }
+  .middle-content .workhistory .workcontainer .twoBlocks div.column {
+    width: 50%;
+    align-items: flex-end;
+  }
+  .middle-content .workhistory .workcontainer .twoBlocks p {
+    text-align: center;
+  }
+}
+/* FOOTER STYLING */
+footer {
+  background: url("../water.jpg");
+  background-repeat: none;
+}
+footer .footercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+footer .footercontainer .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+footer .footercontainer .icons a {
+  color: black;
+  margin: 1%;
+  width: 10%;
+}
+footer .footercontainer .icons a i {
+  line-height: 2;
+  font-size: 2rem;
+  margin: 0 2%;
+}
+@media (max-width: 500px) {
+  footer .footercontainer .icons {
+    width: 100%;
+  }
+  footer .footercontainer .icons a {
+    width: auto;
+  }
+}
+footer .footercontainer .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
+}
+footer .footercontainer .contact .twoBlocks {
+  width: 48%;
+  padding: 1%;
+}
+footer .footercontainer .contact .twoBlocks h4 {
+  font-size: 1.6rem;
+  color: #6A5ACD;
+  text-align: center;
+}
+footer .footercontainer .contact .twoBlocks p {
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  footer .footercontainer .contact {
+    width: 100%;
+  }
+  footer .footercontainer .contact .twoBlocks {
+    width: 30%;
+  }
+}
